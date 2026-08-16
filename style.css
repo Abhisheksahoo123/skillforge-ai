@@ -1,0 +1,222 @@
+:root{
+    --primary:#4F46E5;
+    --primary-dark:#4338CA;
+    --background:#EEF2FF;
+    --surface:#FFFFFF;
+    --text:#111827;
+    --text-light:#6B7280;
+    --border:#E5E7EB;
+}
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0px;
+    padding:0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color:var(--background);
+    color:var(--text);
+    line-height: 1.6;
+}
+.Register{
+    padding:70px 20px;
+    text-align: center;
+    background:
+    radial-gradient(
+        circle at top left,
+         #E0E7FF,
+            transparent 40%
+    ),
+    radial-gradient(
+        circle at bottom right,
+         #C7D2FE,
+            transparent 40%
+        ),
+        var(--background);
+    
+    border-radius: 16px;
+}
+.Register h1{
+    font-size: 48px;
+    color:var(--text);
+    margin-bottom: 10px 0 15px;
+}
+.Register img{
+    width:220px;
+    height:auto;
+    margin-bottom: 10px;
+}
+.Register p{
+    font-size: 18px;
+    color:var(--text-light);
+    max-width: 750px;
+    margin:0 auto 30px;
+}
+.Feature{
+    padding:70px 20px;
+    background-color: var(--background);
+}
+.Feature h1{
+    text-align: center;
+    font-size: 32px;
+    color:var(--text);
+    margin:0 0 40px;
+}
+.Feature h2{
+    text-align: center;
+    font-size: 32px;
+    color:var(--text);
+    margin:0 0 40px;
+}
+.feature-container{
+    /* Use grid to dsplay mean in both row and column */
+    display:grid;
+    /* "I want to arrange element using CSS grid" */
+    /* in column it repeat 4  times each 1 viewwidth */
+    grid-template-columns: repeat(4, 1fr);
+    /* repeat(4, 1fr)
+       ↓
+"Repeat something 4 times" */
+/* 1fr
+ ↓
+"Each column gets 1 equal fraction" */
+    gap:25px;
+    /* Create 4 columns, and give each column 1 equal fraction of the available space.
+} */
+ /* fraction mean equal share of the avaliable space  */
+}
+.feature{
+    background-color: var(--surface);
+    border:1px solid  var(--border);
+    border-radius: 12px;
+    padding:25px;
+   width:300px;
+}
+
+.feature h3{
+    font-size: 20px;
+    color: var(--text);
+    margin-top: 0;
+}
+
+.feature p{
+    font-size: 16px;
+    color: var(--text-light);
+}
+
+.feature {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0  4px 12px  rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease , box-shadow 0.3s ease ;
+    
+    /* transition mean make a CSS change happen smoothly over time  */
+    /* 0.3s mean it change in 0.3 seconds  */
+    /* ease mean change movemnet smoothly  */
+    /* If the transform changes, make that change smoothly over 0.3 seconds. */
+    /* meaning of the above whole line code is Smoothly animate both the movement and shadow over 0.3 seconds. */
+}
+
+.feature:hover{
+    transform:translateY(-5px);
+    box-shadow:0 8px 20px  rgba(0,0,0,0.08); 
+}
+/* hover mean when the mouse pointer is placed over the element 
+.feature : hover mean when the user puts mouse over a feature card 
+translate y means move the element vertically 
+-5 px mean 
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+This adds a shadow around/below the card.
+0-horizontal movement 
+8-vertical movement 
+20px-blur movement 
+0.08-opacity or transperency  */
+.how-it-works{
+    padding:70px 20px;
+    /* top=70px
+    left=20px
+    bottom=70px
+    right=20px */
+   background-color: var(--surface);
+
+}
+.how-it-works h2{
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+/* The below code Arrannge in 4 cards */
+.step{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap:25px;
+
+}
+/*The below code Individual cards*/
+.step{
+    padding:25px;
+    background-color: var(--background);
+    border:1px solid var(--border);
+    border-radius:12px;
+}
+/*Card heading*/
+.step h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+
+}
+
+/*Card description*/
+.step p{
+    color:var(--text-light);
+    margin: 0px;
+}
+/* hover effect */
+.step{
+    transition: transform 0.3s ease , box-shadow 0.3s ease ;
+}
+
+.step:hover{
+    transform:translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+footer{
+    background-color: var(--text);
+    color:white;
+    padding:25px 20px;
+
+}
+ footer p{
+    text-align: center;
+    margin: 0;
+    color:#D1D5DB;
+ }
+.login{
+    max-width: 450px;
+    margin:80px auto;
+    padding:40px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
+.login h2{
+    text-align: center;
+    font-size: 32px;
+    color: var(--text);
+    margin-bottom: 30px;
+
+}
+.register{
+    /* max-width nean The register card can be at most 450px wide. */
+    max-width: 450px;
+    /* 80px-space above and below ,autp center the card horizontally */
+    margin: 80px auto;
+    text-align: center;
+    padding: 40px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+}
